@@ -1,38 +1,150 @@
-.App {
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+#overlay {
+  background: #ffffff;
+  color: lightgrey;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  float: left;
+  text-align: center;
+  padding-top: 25%;
+  opacity: 0.7;
+}
+/*######################################### Cities   ###########################################*/
+.alisar {
+  background: url("./images/rest.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 100px 0;
+  text-shadow: 1px 0 black;
+  text-shadow: none;
+  background-position: center;
+}
+
+.alisar .logo {
+  font-size: 70px;
+  color: white;
+  height: 110px;
+  width: 110px;
+  font-family: cursive;
+  text-align: center;
+  padding-top: 33px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.alisar h1 {
+  color: whitesmoke;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0px 0 rgb(0, 0, 0);
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 600px;
+  margin: auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.searchBar .city {
+  margin: 15px;
+  width: 300px;
+  height: 35px;
+  font-weight: 100;
+  padding: 6px 12px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.searchBar .search-btn {
+  margin: 15px;
+  font-size: 15px;
+  height: 35px;
+  width: 150px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #17a2b8;
+  border: 1px solid #4dd0e1;
+  color: #eeeeee;
+  cursor: pointer;
+}
+
+.searchBar .search-btn:hover {
+  background-color: #757575;
+}
+
+.listBox {
+  display: flex;
+}
+
+@media (max-width: 950px) {
+  .searchBar {
+    width: 70%;
+  }
+  .searchBar .city {
+    width: 150px;
+    margin: 15px 5px 15px 10px;
+  }
+
+  .searchBar .search-btn {
+    width: 90px;
+    margin: 15px 5px 15px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .searchBar {
+    display: block;
+  }
+  .searchBar .city,
+  .searchBar .search-btn {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .searchBar div {
+    width: 90%;
+    margin: auto;
+    align-content: center;
+    padding: 10px;
+  }
+}
+
+.cityName {
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cityCard {
+  width: 240px;
+  height: 230px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cardBody {
+  margin-left: 70px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.collectionCard {
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay-dark {
+  background: rgba(0, 0, 0, 0.3);
 }
